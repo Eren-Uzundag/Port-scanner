@@ -22,7 +22,12 @@ def scan_socket(host, port):
         a = s.connect_ex((host, port))
         
         if a == 0:
-            print(f"port {port} is open on {host}")
+            try:
+             servis = socket.getservbyport(port)
+            except OSError:
+             servis = "bilinmiyor"
+
+            print(f"Port {port} is open on {host} ({servis})")
 
         else:
               pass   
@@ -32,7 +37,7 @@ def scan_socket(host, port):
    
 def main():
     arg = parse_arguments()
-    print(f"scanning ports on {arg.host} from {arg.start} to {arg.end}")
+    print(f"Scanning ports on {arg.host} from {arg.start} to {arg.end}")
 
     start = time.perf_counter()
     with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
