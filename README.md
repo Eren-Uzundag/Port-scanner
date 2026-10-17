@@ -23,7 +23,9 @@ python Scanner.py localhost --start 8000 --end 8005
 ## Örnek Çıktı
 
 -Scanning ports on localhost from 8000 to 8005
+
 -Port 8000 is open on localhost 
+
 -Finished in 0.00286 second(s)
 
 
