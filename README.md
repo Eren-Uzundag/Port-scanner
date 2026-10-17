@@ -5,7 +5,7 @@
 
 - Komut satırından host ve port aralığı alma (argparse)
 - ThreadPoolExecutor ile paralel tarama
-- Açık portları bildirme ve tarama süresini ölçme
+- Açık portlarla birlikte servis adlarını  bildirme ve tarama süresini ölçme
 
 ## Gereksinimler
 
@@ -24,9 +24,9 @@ python Scanner.py localhost --start 8000 --end 8005
 
 -Scanning ports on localhost from 8000 to 8005
 
--Port 8000 is open on localhost 
+-Port 8000 is open on localhost (irdmi)
 
--Finished in 0.00286 second(s)
+-Finished in 0.00528 second(s)
 
 
 ## Yasal Uyarı
